@@ -4,11 +4,27 @@ const config = require('./config.json');
 const client = new Discord.Client();
 
 const embed = new Discord.MessageEmbed()
-	.setTitle('Some Title')
-	.setColor('#0099ff');
+	.setTitle('RULES')
+	.setColor('#850e26')
+	.addFields(
+		{ name: 'Rule 1', value: "You must have your Rank, Regiment, and ROBLOX username in your Discord nickname.", inline:true },
+		{ name: 'Rule 2', value: 'Please be respectful to everyone here. Do not treat someone differently based on race, sex, or religion!', inline: true },
+        	{ name: 'Rule 3', value: 'This is an English speaking discord, please keep relevant topics in their correct text channels.', inline: true },
+        	{ name: 'Rule 4', value: 'Mic/Text spamming/@ing spamming (making loud or continuous noises over mic) is forbidden.', inline: true },
+        	{ name: 'Rule 5', value: 'NSFW (Not Safe For Work) content is absolutely forbidden. This includes gore, pornography, and other NSFW content', inline: true },
+        	{ name: 'Rule 6', value: 'Targeting someone in order to provoke by any means is forbidden. This includes leaking addresses, full names, etc.', inline: true },
+        	{ name: 'Rule 7', value: 'If you have background sounds/music going off on your mic, please either stop the noise, mute yourself, or turn on Push-To-Talk. Voice changers are also considered annoying noises, so they are forbidden.', inline: true },
+        	{ name: 'Rule 8', value: 'Do not argue on one of our public text channels.', inline: true },
+        	{ name: 'Rule 9', value: 'Shortened or bad links that look unfamiliar are not allowed. Officer+ is the deciding factor of this.', inline: true },
+        	{ name: 'Rule 10', value: 'Cursing is allowed but limited to mild language. Use of racist/sexist/other insulting curse words is not allowed at all. (This rule is slightly relaxed in the off duty chat).', inline: true },
+        	{ name: 'Rule 11', value: 'Have appropriate profile pictures, they may not consist of pornography, gore, or have relations to a terrorist organization.', inline: true },
+        	{ name: 'Rule 12', value: 'No advertising of any sort, unless approved by High Command+', inline: true },
+       		{ name: 'Rule 13', value: 'Do not use the @everyone command unless it is something important. Officer+ will be the deciding factor for this.', inline: true },
+		{ name: 'Rule 14', value: 'Toxicity is absolutely forbidden.', inline=true }
+	);
 
 client.once('ready', async () => {
-	const channel = client.channels.cache.get('222197033908436994');
+	const channel = client.channels.cache.get('716700036226089061');
 	try {
 		const webhooks = await channel.fetchWebhooks();
 		const webhook = webhooks.first();
